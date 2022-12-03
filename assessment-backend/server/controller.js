@@ -9,9 +9,7 @@ module.exports = {
       
         res.status(200).send(randomCompliment);
     }
-
-}
-    module.exports = {
+,
     getFortune: (req, res) => {
         const fortune = ["A faithful friend is a strong defense.", "Advice, when most needed, is least heeded.", "Protective measures will prevent costly disasters."];
       
