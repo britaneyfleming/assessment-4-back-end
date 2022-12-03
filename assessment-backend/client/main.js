@@ -32,4 +32,28 @@ const getEncouragement = () => {
     });
 };
 
-encouragementBtn.addEventListener('click', getEncouragement)
+encourageBtn.addEventListener('click', getEncouragement)
+
+const studyBtn = document.getElementById("studyButton")
+
+const getStudyTip = () => {
+    axios.get("http://localhost:4000/api/study/")
+        .then(res => {
+            const data4 = res.data;
+            alert(data4);
+    });
+};
+
+studyBtn.addEventListener('click', getStudyTip)
+
+const reminderBtn = document.getElementById("reminderButton")
+
+const getReminder = () => {
+    axios.get("http://localhost:4000/api/reminder/")
+        .then(res => {
+            const data5 = res.data;
+            alert(data5);
+    });
+};
+
+reminderBtn.addEventListener('click', getReminder)

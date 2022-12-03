@@ -24,10 +24,30 @@ module.exports = {
         const encouragement = ["You can do this!", "You're doing great!", "Keep going!"];
       
         // choose random fortune
-        let randomIndex2 = Math.floor(Math.random() * fortune.length);
+        let randomIndex2 = Math.floor(Math.random() * encouragement.length);
         let randomEncouragement = encouragement[randomIndex2];
       
         res.status(200).send(randomEncouragement);
+    }
+    ,
+    getStudyTip: (req, res) => {
+        const studyTip = ["Give your brain a break!", "Take detailed notes!", "Study for 30 minute intervals!"];
+      
+        // choose random fortune
+        let randomIndex3 = Math.floor(Math.random() * studyTip.length);
+        let randomStudyTip = studyTip[randomIndex3];
+      
+        res.status(200).send(randomStudyTip);
+    }
+    ,
+    getReminder: (req, res) => {
+        const reminder = ["Go for a walk!", "Eat lunch.", "Stretch!"];
+      
+        // choose random fortune
+        let randomIndex4 = Math.floor(Math.random() * reminder.length);
+        let randomReminder = reminder[randomIndex4];
+      
+        res.status(200).send(randomReminder);
     }
 
 }

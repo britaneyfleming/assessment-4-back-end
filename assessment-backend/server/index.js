@@ -22,4 +22,13 @@ const { getEncouragement } = require('./controller')
 app.get("/api/encourage", getEncouragement);
 
 
+const { getStudyTip } = require('./controller')
+
+app.get("/api/study", getStudyTip);
+
+
+const { getReminder } = require('./controller')
+
+app.get("/api/reminder", getReminder);
+
 app.listen(4000, () => console.log("Server running on 4000"));
