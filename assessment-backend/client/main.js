@@ -21,3 +21,15 @@ const getFortune = () => {
 };
 
 fortuneBtn.addEventListener('click', getFortune)
+
+const encourageBtn = document.getElementById("encourageButton")
+
+const getEncouragement = () => {
+    axios.get("http://localhost:4000/api/encourage/")
+        .then(res => {
+            const data3 = res.data;
+            alert(data3);
+    });
+};
+
+encouragementBtn.addEventListener('click', getEncouragement)

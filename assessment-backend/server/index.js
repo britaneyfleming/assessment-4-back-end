@@ -16,4 +16,10 @@ const { getFortune } = require('./controller')
 
 app.get("/api/fortune", getFortune);
 
+
+const { getEncouragement } = require('./controller')
+
+app.get("/api/encourage", getEncouragement);
+
+
 app.listen(4000, () => console.log("Server running on 4000"));

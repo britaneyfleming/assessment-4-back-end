@@ -19,5 +19,15 @@ module.exports = {
       
         res.status(200).send(randomFortune);
     }
+    ,
+    getEncouragement: (req, res) => {
+        const encouragement = ["You can do this!", "You're doing great!", "Keep going!"];
+      
+        // choose random fortune
+        let randomIndex2 = Math.floor(Math.random() * fortune.length);
+        let randomEncouragement = encouragement[randomIndex2];
+      
+        res.status(200).send(randomEncouragement);
+    }
 
 }
