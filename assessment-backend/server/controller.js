@@ -1,5 +1,7 @@
-module.exports = {
+const fortune = ["A faithful friend is a strong defense.", "Advice, when most needed, is least heeded.", "Protective measures will prevent costly disasters."];
 
+module.exports = {
+   
     getCompliment: (req, res) => {
         const compliments = ["Gee, you're a smart cookie!", "Cool shirt!", "Your Javascript skills are stellar."];
       
@@ -11,8 +13,7 @@ module.exports = {
     }
 ,
     getFortune: (req, res) => {
-        const fortune = ["A faithful friend is a strong defense.", "Advice, when most needed, is least heeded.", "Protective measures will prevent costly disasters."];
-      
+        
         // choose random fortune
         let randomIndex1 = Math.floor(Math.random() * fortune.length);
         let randomFortune = fortune[randomIndex1];
@@ -48,6 +49,10 @@ module.exports = {
         let randomReminder = reminder[randomIndex4];
       
         res.status(200).send(randomReminder);
+    },
+    addFortune: (req, res) => {
+        // let newFortune = req.body 
+        console.log(req.body.fortune)
     }
 
 }

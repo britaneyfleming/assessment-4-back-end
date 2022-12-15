@@ -57,3 +57,21 @@ const getReminder = () => {
 };
 
 reminderBtn.addEventListener('click', getReminder)
+
+const addFortuneButton = document.getElementById("AddFortuneButton")
+
+const addFortune = (body) => {
+    axios.post("http://localhost:4000/api/fortune/", body)
+        .then(res => {
+            const data5 = res.data;
+            alert(data5);
+    });
+};
+
+addFortuneButton.addEventListener('click', addFortune)
+
+function submitHandler(event){
+    event.preventDefault();
+    let input = document.getElementById("input")
+    addFortune(input.value)
+};
