@@ -61,6 +61,7 @@ reminderBtn.addEventListener('click', getReminder)
 const addFortuneButton = document.getElementById("AddFortuneButton")
 
 const addFortune = (body) => {
+    console.log(body)
     axios.post("http://localhost:4000/api/fortune/", body)
         .then(res => {
             const data5 = res.data;
@@ -73,5 +74,6 @@ addFortuneButton.addEventListener('click', addFortune)
 function submitHandler(event){
     event.preventDefault();
     let input = document.getElementById("input")
-    addFortune(input.value)
+    let body = {fortune:input.value}
+    addFortune(body)
 };

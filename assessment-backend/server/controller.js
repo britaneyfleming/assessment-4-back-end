@@ -52,7 +52,7 @@ module.exports = {
     },
     addFortune: (req, res) => {
         // let newFortune = req.body 
-        console.log(req.body.fortune)
+        console.log(req.body)
     }
 
 }
